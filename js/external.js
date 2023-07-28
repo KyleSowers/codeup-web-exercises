@@ -1,7 +1,7 @@
 "use strict";
 
 // Simple opening alert
-console.log("Hello from extrenal JavaScript");
+console.log("Hello from external JavaScript");
 
 alert("Welcome to my Website!");
 
