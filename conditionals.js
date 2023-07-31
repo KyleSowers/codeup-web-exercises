@@ -42,8 +42,10 @@
 //         return "White is the color of paper!";
 //     } else if (lowerCaseColor === "brown") {
 //         return "Brown is the color of tree bark!";
+//     } else if (lowerCaseColor === "orange") {
+//         return "Orange is the color of an orange!";
 //     } else {
-//         return "We do not recognize that color.";
+//         return "That is not on our color list.";
 //     }
 // }
 //
@@ -228,24 +230,26 @@ alert("Your lucky number is " + luckyNumber + ". Your original total was $" + to
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-let willProvideNumber = confirm("Would you like to provide a number?");
+let numberConfirmation = confirm("Would you like to provide a number?");
 
+if (numberConfirmation) {
+    let userNumber = prompt("Please provide a number."));
 
-function provideNumber(willProvideNumber) {
-    if (true) {
-        return willProvideNumber = prompt("Select a number 0 - 5");
+    if (!isNaN(userNumber)) {
+        let parsedNumber = parseFloat(userNumber);
+
+        let evenOrOddMessage = (parsedNumber % 2 == 0) ? "Your number is even!" : "Your number is odd!";
+        alert(evenOrOddMessage);
+
+        alert(`Your number plus 100 is: ${parsedNumber + 100}`);
+
+        let positiveNegativeNumber = (parsedNumber >= 0) ? "Your number is positive!" : "Your number is negative!";
+        alert(positiveNegativeMessage);
+
     } else {
-        return "It's okay";
+        alert("Hey, that is not a number.");
     }
 }
-let number = ""
-function evenOrOddNumber(number) {
-    if (number % 2==0) {
-       return "even";
-    } else {
-        return "odd";
-    }
-}
 
-alert("your number \"" + willProvideNumber + "\" is " + evenOrOddNumber(willProvideNumber) + ".")
+
 
