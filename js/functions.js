@@ -50,7 +50,7 @@ var random = Math.floor((Math.random() * 3) + 1);
 function isTwo(random) {
     if (random == 2) {
         return "true";
-    } else if (random != 2) {
+    } else {
         return "false";
     }
 }
