@@ -233,7 +233,7 @@ alert("Your lucky number is " + luckyNumber + ". Your original total was $" + to
 let numberConfirmation = confirm("Would you like to provide a number?");
 
 if (numberConfirmation) {
-    let userNumber = prompt("Please provide a number."));
+    let userNumber = prompt("Please provide a number.");
 
     if (!isNaN(userNumber)) {
         let parsedNumber = parseFloat(userNumber);
@@ -244,8 +244,7 @@ if (numberConfirmation) {
         alert(`Your number plus 100 is: ${parsedNumber + 100}`);
 
         let positiveNegativeNumber = (parsedNumber >= 0) ? "Your number is positive!" : "Your number is negative!";
-        alert(positiveNegativeMessage);
-
+        alert(positiveNegativeNumber);
     } else {
         alert("Hey, that is not a number.");
     }

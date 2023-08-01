@@ -110,8 +110,16 @@ alert("Your tip should be $" + userTipTotal + " at " + userTip + "%.");
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-function applyDiscount(price) {
-
+let discountPercentage = "decimalFormPercent"
+let price = "";
+function applyDiscount(price, discountPercentage) {
+    price = (price - (price * discountPercentage));
+    return price.toFixed(2);
 }
+
+console.log(applyDiscount(45.99, .12));
+alert(`Your price after discount is $${applyDiscount(45.99, .12)}.`);
+
+
 
 
