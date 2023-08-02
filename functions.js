@@ -93,8 +93,12 @@ userTip = parseInt(userTip);
 
 let userTipTotal = userTotal * userTip / 100;
 
-alert("Your tip should be $" + userTipTotal + " at " + userTip + "%.");
+// alert("Your tip should be $" + userTipTotal + " at " + userTip + "%.");
+
+let newUserTipTotal = calculateTip(userTip, userTotal);
+alert("Your tip amount should be $" + userTipTotal)
 // End of TODO
+
 
 /**
  * TODO:
@@ -112,9 +116,9 @@ alert("Your tip should be $" + userTipTotal + " at " + userTip + "%.");
  */
 let discountPercentage = "decimalFormPercent"
 let price = "";
-function applyDiscount(price, discountPercentage) {
-    price = (price - (price * discountPercentage));
-    return price.toFixed(2);
+function applyDiscount(priceBeforeDiscount, discountPercentage) {
+    let priceAfterDiscount = (priceBeforeDiscount - (priceBeforeDiscount * discountPercentage));
+    return priceAfterDiscount.toFixed(2);
 }
 
 console.log(applyDiscount(45.99, .12));
