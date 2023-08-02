@@ -15,6 +15,11 @@
 // var helloMessage = sayHello('Kyle');
 // console.log(helloMessage);
 // End of TODO
+// Review copy
+// function sayHello() {
+//     let nameInput = name;
+//     return `Hello, , ${nameInput}!`;
+// }
 
 /**
  * TODO:
@@ -70,13 +75,13 @@
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-// function calculateTip(tipPercent, total) {
-//     return tipPercent * total;
-// }
-// // Examples
-// console.log(calculateTip(.20, 20));
-// console.log(calculateTip(.25, 25.50));
-// console.log(calculateTip(.15, 33.42));
+function calculateTip(tipPercent, total) {
+    return tipPercent * total;
+}
+// Examples
+console.log(calculateTip(.20, 20));
+console.log(calculateTip(.25, 25.50));
+console.log(calculateTip(.15, 33.42));
 // End of TODO
 
 /**
@@ -85,18 +90,18 @@
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-// let userTotal = prompt("What is your bill total?");
-// userTotal = parseInt(userTotal);
-//
-// let userTip = prompt("What percentage of tip would you like to leave today?");
-// userTip = parseInt(userTip);
-//
-// let userTipTotal = userTotal * userTip / 100;
-//
-// // alert("Your tip should be $" + userTipTotal + " at " + userTip + "%.");
-//
-// let newUserTipTotal = calculateTip(userTip, userTotal);
-// alert("Your tip amount should be $" + userTipTotal)
+let userTotal = prompt("What is your bill total?");
+userTotal = parseInt(userTotal);
+
+let userTip = prompt("What percentage of tip would you like to leave today?");
+userTip = parseInt(userTip);
+
+let userTipTotal = userTotal * userTip / 100;
+
+// alert("Your tip should be $" + userTipTotal + " at " + userTip + "%.");
+
+let newUserTipTotal = calculateTip(userTip, userTotal);
+alert("Your tip amount should be $" + userTipTotal)
 // End of TODO
 
 
