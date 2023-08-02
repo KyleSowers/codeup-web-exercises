@@ -123,7 +123,7 @@ function applyDiscount(priceBeforeDiscount, discountPercentage) {
 }
 
 console.log(applyDiscount(priceBeforeDiscount, discountPercentage));
-alert(`Your price after discount is $${applyDiscount(45.99, .12).toFixed(2)}.`);
+alert(`Your price after discount is $${applyDiscount(priceBeforeDiscount, discountPercentage).toFixed(2)}.`);
 
 
 
