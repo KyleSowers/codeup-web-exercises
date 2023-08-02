@@ -7,13 +7,13 @@
  *
  * console.log 'helloMessage' to check your work
  */
-function sayHello(name) {
-    let initialGreeting = "Hello " + name + "!";
-    return initialGreeting;
-};
-
-var helloMessage = sayHello('Kyle');
-console.log(helloMessage);
+// function sayHello(name) {
+//     let initialGreeting = "Hello " + name + "!";
+//     return initialGreeting;
+// };
+//
+// var helloMessage = sayHello('Kyle');
+// console.log(helloMessage);
 // End of TODO
 
 /**
@@ -22,13 +22,13 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-let myName = 'Kyle';
-console.log(sayHello(myName));
-// End of TODO
-
-// Don't modify the following line, it generates a random number between 1 and 3
-// and stores it in a variable named random
-var random = Math.floor((Math.random() * 3) + 1);
+// let myName = 'Kyle';
+// console.log(sayHello(myName));
+// // End of TODO
+//
+// // Don't modify the following line, it generates a random number between 1 and 3
+// // and stores it in a variable named random
+// var random = Math.floor((Math.random() * 3) + 1);
 
 /**
  * TODO:
@@ -47,15 +47,15 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(random) {
-    if (random == 2) {
-        return "true";
-    } else {
-        return "false";
-    }
-}
-
-console.log(isTwo(random));
+// function isTwo(random) {
+//     if (random == 2) {
+//         return "true";
+//     } else {
+//         return "false";
+//     }
+// }
+//
+// console.log(isTwo(random));
 // End of TODO
 
 /**
@@ -70,13 +70,13 @@ console.log(isTwo(random));
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 
-function calculateTip(tipPercent, total) {
-    return tipPercent * total;
-}
-// Examples
-console.log(calculateTip(.20, 20));
-console.log(calculateTip(.25, 25.50));
-console.log(calculateTip(.15, 33.42));
+// function calculateTip(tipPercent, total) {
+//     return tipPercent * total;
+// }
+// // Examples
+// console.log(calculateTip(.20, 20));
+// console.log(calculateTip(.25, 25.50));
+// console.log(calculateTip(.15, 33.42));
 // End of TODO
 
 /**
@@ -85,18 +85,18 @@ console.log(calculateTip(.15, 33.42));
  * prompt the user for the bill total and a percentage they would like to tip,
  * then display the dollar amount they should tip
  */
-let userTotal = prompt("What is your bill total?");
-userTotal = parseInt(userTotal);
-
-let userTip = prompt("What percentage of tip would you like to leave today?");
-userTip = parseInt(userTip);
-
-let userTipTotal = userTotal * userTip / 100;
-
-// alert("Your tip should be $" + userTipTotal + " at " + userTip + "%.");
-
-let newUserTipTotal = calculateTip(userTip, userTotal);
-alert("Your tip amount should be $" + userTipTotal)
+// let userTotal = prompt("What is your bill total?");
+// userTotal = parseInt(userTotal);
+//
+// let userTip = prompt("What percentage of tip would you like to leave today?");
+// userTip = parseInt(userTip);
+//
+// let userTipTotal = userTotal * userTip / 100;
+//
+// // alert("Your tip should be $" + userTipTotal + " at " + userTip + "%.");
+//
+// let newUserTipTotal = calculateTip(userTip, userTotal);
+// alert("Your tip amount should be $" + userTipTotal)
 // End of TODO
 
 
@@ -114,15 +114,16 @@ alert("Your tip amount should be $" + userTipTotal)
  *
  * > applyDiscount(45.99, 0.12) // 40.4712
  */
-let discountPercentage = "decimalFormPercent"
-let price = "";
+let discountPercentage = Math.random().toFixed(2);
+let priceBeforeDiscount = prompt("What is your total?");
+alert("Your discount is " + (discountPercentage * 100).toFixed() + "%");
 function applyDiscount(priceBeforeDiscount, discountPercentage) {
     let priceAfterDiscount = (priceBeforeDiscount - (priceBeforeDiscount * discountPercentage));
-    return priceAfterDiscount.toFixed(2);
+    return priceAfterDiscount;
 }
 
-console.log(applyDiscount(45.99, .12));
-alert(`Your price after discount is $${applyDiscount(45.99, .12)}.`);
+console.log(applyDiscount(priceBeforeDiscount, discountPercentage));
+alert(`Your price after discount is $${applyDiscount(45.99, .12).toFixed(2)}.`);
 
 
 
