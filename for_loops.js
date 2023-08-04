@@ -20,18 +20,30 @@
 // }
 
 
-let result = "";
-let numberOfLoops = 9;
-let  currentLoop = 1;
+// let result = "";
+// let numberOfLoops = 9;
+// let  currentLoop = 1;
+//
+// for ( currentLoop; currentLoop <= numberOfLoops; currentLoop++) {
+//     let line = "";
+//
+//     for (let i = 1; i <= currentLoop; i++) {
+//         line += currentLoop;
+//     }
+//
+//     result += line + "\n";
+// }
+//
+// console.log(result);
 
-for ( currentLoop; currentLoop <= numberOfLoops; currentLoop++) {
-    let line = "";
+// for (let x = 100; x >= 5; x-=5) {
+//     console.log(x);
+// }
 
-    for (let i = 1; i <= currentLoop; i++) {
-        line += currentLoop;
+for (let x = 100; x >= 5; x--) {
+    if (x % 5==0) {
+        console.log(x);
+    } else {
+        continue;
     }
-
-    result += line + "\n";
 }
-
-console.log(result);
