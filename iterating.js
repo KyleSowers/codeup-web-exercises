@@ -58,3 +58,19 @@ console.log("\n");
  *  > second([1, 2, 3, 4, 5]) // returns 2
  *  > last([1, 2, 3, 4, 5]) // return 5
  */
+let numbers = [1, 2, 3, 4, 5];
+
+function first() {
+    return numbers[0];
+}
+console.log(first());
+
+function second() {
+    return numbers[1];
+}
+console.log(second());
+
+function third() {
+    return numbers[4];
+}
+console.log(third());
