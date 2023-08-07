@@ -7,12 +7,12 @@
  */
 let names = ['Bob', 'Kevin', 'Micheal', 'Andrew'];
 
-
 /**
  * TODO:
  * Create a log statement that will log the number of elements in the names
  * array.
  */
+console.log(names);
 
 /**
  * TODO:
