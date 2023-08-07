@@ -10,10 +10,9 @@
      * planetsArray.
      * console.log planetsArray to check your work
      */
-    planetsArray = planetsString.split('');
+    planetsArray = planetsString.split("|");
 
     console.log(planetsArray);
-    // console.log(planetsArray);
 
     /**
      * TODO:
