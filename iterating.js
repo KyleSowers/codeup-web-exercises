@@ -6,13 +6,15 @@
  * 'names'.
  */
 let names = ['Bob', 'Kevin', 'Micheal', 'Andrew'];
+console.log(names);
 
+console.log("\n");
 /**
  * TODO:
  * Create a log statement that will log the number of elements in the names
  * array.
  */
-console.log(names);
+console.log(names.length);
 
 console.log("\n");
 /**
@@ -70,7 +72,7 @@ function second() {
 }
 console.log(second());
 
-function third() {
-    return numbers[4];
+function last() {
+    return numbers[numbers.length - 1];
 }
-console.log(third());
+console.log(last());
