@@ -24,12 +24,18 @@ console.log(planetsArray);
  * list. You will need an opening AND closing <ul> tags around the entire
  * string, and <li> tags around each planet.
  */
-planetsString = planetsArray.join(" <br> ");
-console.log(planetsString);
+// planetsString = planetsArray.join(" <br> ");
+// console.log(planetsString);
 
 
 //Bonus
-planetsArray
-planetsArray.push("</ul>");
-planetsArray.unshift("<ul>");
+planetsString = planetsArray.join("</li><li>");
+console.log(planetsString);
+planetsArray = planetsString.split();
 console.log(planetsArray);
+console.log(planetsArray.unshift("<ul><li>"));
+console.log(planetsArray.push("</li></ul>"));
+console.log(planetsArray);
+console.log(planetsString = planetsArray.join());
+
+
