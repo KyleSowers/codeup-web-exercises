@@ -73,6 +73,74 @@ shoppers.forEach(function(shopper) {
  * > console.log(books[0].author.firstName) // "Douglas"
  * > console.log(books[0].author.lastName) // "Adams"
  */
+// let book1 = {
+//     bookTitle: "Atomic Habits",
+//     authorFirstName: "James",
+//     authorLast: "Clear",
+// }
+// let book2 = {
+//     bookTitle: "Deep Work",
+//     authorFirstName: "Cal",
+//     authorLast: "Newport",
+// }
+// let book3 = {
+//     bookTitle: "Clean Code",
+//     authorFirstName: "Robert",
+//     authorLast: "Martin",
+// }
+// let book4 = {
+//     bookTitle: "Think Like A Programmer",
+//     authorFirstName: "V.",
+//     authorLast: "Spraul",
+// }
+// let book5 = {
+//     bookTitle: "Liftoff",
+//     authorFirstName: "Eric",
+//     authorLast: "Berger",
+// }
+
+let books = [{
+    id: "1",
+    bookTitle: "Atomic Habits",
+    author: {
+        firstName: "James",
+        lastName: "Clear",
+    },
+},
+    {
+    id: "2",
+    bookTitle: "Deep Work",
+    author: {
+        firstName: "Cal",
+        lastName: "Newport",
+    },
+},
+    {
+    id: "3",
+    bookTitle: "Clean Code",
+    author:{
+        firstName: "Robert",
+        lastName: "Martin",
+    },
+},
+    {
+    id: "4",
+    bookTitle: "Think Like A Programmer",
+    author: {
+        firstName: "V.",
+        lastName: "Spraul",
+    },
+},
+    {
+    id: "5",
+    bookTitle: "Liftoff",
+    author: {
+        firstName: "Eric",
+        lastName: "Berger",
+    },
+}]
+console.log(books[0].author.lastName);
+console.log(books[3].author.firstName);
 
 /**
  * TODO:
@@ -98,6 +166,16 @@ shoppers.forEach(function(shopper) {
  *      ---
  *      ...
  */
+// books.forEach(function (bookDetails) {
+//     console.log(`Book # ${books[i].id}`);
+// })
+
+// for (let i = 0; i < books.length; i++) {
+//     console.log(`Book # ${books[i].id}`);
+//     console.log(`Title: ${books[i].bookTitle}`);
+//     console.log(`Author: ${books[i].author.firstName} ${books[i].author.lastName}`);
+// }
+
 
 /**
  * Bonus:
@@ -109,3 +187,28 @@ shoppers.forEach(function(shopper) {
  *   outputs the information described above. Refactor your loop to use your
  *   `showBookInfo` function.
  */
+
+
+function createBook() {
+    let bookTitle = prompt("Provide a book title.");
+    console.log(bookTitle);
+
+    let authorsName = prompt("Provide authors first and last name");
+    console.log(authorsName);
+    let authorsNameArray = authorsName.split(" ");
+    console.log(authorsNameArray);
+    let firstName = authorsNameArray[0];
+    console.log(firstName);
+    let lastName = authorsNameArray[1];
+    console.log(lastName);
+    let book = {
+        title: bookTitle, author: {authorsfirstName: firstName, authorslastName: lastName}
+    }
+    return book;
+};
+
+books.push(createBook());
+console.log(books);
+
+
+
