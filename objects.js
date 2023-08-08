@@ -10,6 +10,12 @@
  *  > console.log(person.firstName) // "Rick"
  *  > console.log(person.lastName) // "Sanchez"
  */
+let person = {
+    firstName: "Kyle",
+    lastName: "Sowers"
+};
+console.log(`${person.firstName} ${person.lastName}`);
+
 
 /**
  * TODO:
@@ -20,6 +26,10 @@
  * Example
  * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
  */
+person.sayHello = function () {
+    console.log(`Hello from ${person.firstName} ${person.lastName}!`);
+};
+person.sayHello();
 
 /** TODO:
  * HEB has an offer for the shoppers that buy products amounting to
@@ -35,11 +45,21 @@
  * and console.log the relevant messages for each person
  */
 
-// var shoppers = [
-//     {name: 'Cameron', amount: 180},
-//     {name: 'Ryan', amount: 250},
-//     {name: 'George', amount: 320}
-// ];
+var shoppers = [
+    {name: 'Cameron', amount: 180},
+    {name: 'Ryan', amount: 250},
+    {name: 'George', amount: 320}
+];
+
+shoppers.forEach(function(shopper) {
+    if (shopper.amount < 201){
+        console.log(`${shopper.name}, your total was $${shopper.amount}, but the 12% discount required a purchase of more then $200. Your total is still $${shopper.amount}`);
+    }
+    if (shopper.amount > 200) {
+       let newTotal = shopper.amount - (shopper.amount * .12);
+        console.log(`${shopper.name}, your total was $${shopper.amount}, but with the 12% discount for a purchase of more then $200, your total is now $${newTotal}`);
+    }
+})
 
 /** TODO:
  * Create an array of objects that represent books and store it in a
