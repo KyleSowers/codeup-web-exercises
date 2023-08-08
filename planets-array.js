@@ -1,40 +1,52 @@
-(function(){
-    "use strict";
+"use strict"
 
-    var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    var planetsArray;
+var planets = [
+    'Mercury',
+    'Venus',
+    'Earth',
+    'Mars',
+    'Jupiter',
+    'Saturn',
+    'Uranus',
+    'Neptune'
+];
 
-    /**
-     * TODO:
-     * Convert planetsString to an array, and save it in a variable named
-     * planetsArray.
-     * console.log planetsArray to check your work
-     */
-    planetsArray = planetsString.split("|");
+/**
+ * TODO:
+ * Read each console log below, and write some javascript code to perform
+ * the step that it describes
+ */
 
-    console.log(planetsArray);
+console.log('Adding "The Sun" to the beginning of the planets array.');
+console.log(planets);
+planets.unshift("The Sun");
+console.log(planets);
 
-    /**
-     * TODO:
-     * Create a string with <br> tags between each planet. console.log() your
-     * results. Why might this be useful?
-     *
-     * BONUS:
-     * Create another string that would display your planets in an undordered
-     * list. You will need an opening AND closing <ul> tags around the entire
-     * string, and <li> tags around each planet.
-     */
-    planetsString = planetsArray.join(" <br> ");
-    console.log(planetsString);
+console.log('Adding "Pluto" to the end of the planets array.');
+console.log(planets);
+planets.push("Pluto");
+console.log(planets);
+
+console.log('Removing "The Sun" from the beginning of the planets array.');
+console.log(planets);
+planets.shift([0]);
+console.log(planets);
+
+console.log('Removing "Pluto" from the end of the planets array.');
+console.log(planets);
+planets.pop([8]);
+console.log(planets);
+
+console.log('Finding and logging the index of "Earth" in the planets array.');
+console.log(planets.indexOf("Earth"));
 
 
-    //Bonus
-    planetsArray
-   planetsArray.push("</ul>");
-   planetsArray.unshift("<ul>");
-   console.log(planetsArray);
+console.log("Reversing the order of the planets array.");
+console.log(planets);
+console.log(planets.reverse());
 
-
-    //"<ul><li>element1</li><li>element2</li>... </ul>
+console.log("Sorting the planets array.");
+console.log(planets);
+console.log(planets.sort());
 
 
