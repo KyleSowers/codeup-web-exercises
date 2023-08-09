@@ -27,9 +27,10 @@ console.log(`${person.firstName} ${person.lastName}`);
  * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
  */
 person.sayHello = function () {
-    console.log(`Hello from ${person.firstName} ${person.lastName}!`);
+    // console.log(`Hello from ${person.firstName} ${person.lastName}!`);
+    return `Hello from ${this.firstName} ${this.lastName}!`;
 };
-person.sayHello();
+console.log(person.sayHello());
 
 /** TODO:
  * HEB has an offer for the shoppers that buy products amounting to
@@ -57,7 +58,7 @@ shoppers.forEach(function(shopper) {
     }
     if (shopper.amount > 200) {
        let newTotal = shopper.amount - (shopper.amount * .12);
-        console.log(`${shopper.name}, your total was $${shopper.amount}, but with the 12% discount for a purchase of more then $200, your total is now $${newTotal}`);
+        console.log(`${shopper.name}, your total was $${shopper.amount}, but with the 12% discount for a purchase of more then $200, your total is now $${newTotal.toFixed(2)}`);
     }
 })
 
@@ -209,6 +210,5 @@ function createBook() {
 
 books.push(createBook());
 console.log(books);
-
 
 
