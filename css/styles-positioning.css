@@ -1,6 +1,7 @@
 /* All your custom styles for this site go here */
 body {
     font-family: 'Montserrat', sans-serif;
+    position: relative;
 }
 .page-wrapper {
     background-color: #D9D9D9;
@@ -73,4 +74,29 @@ button.btn.btn-login {
     min-width: 250px;
 }
 
+.dots-1 {
+    position: absolute;
+    top: 47%;
+    left: 10%;
+}
+
+.dots-2 {
+    position: absolute;
+    top: 2%;
+    right: 8%;
+}
+
+.wave-bottom {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -5%;
+}
+
+.wave-top {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -5%;
+}
 
