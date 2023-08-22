@@ -82,10 +82,10 @@ footer  {
         gap: 50px;
     }
     .footer-text {
-        font-size: 9px;
+        font-size: 15px;
     }
     .img-properties {
-        max-width: 9px;
+        max-width: 20px;
     }
     .footer-mobile-row {
          gap: 20px;
