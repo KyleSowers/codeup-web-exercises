@@ -82,13 +82,13 @@ footer  {
         gap: 50px;
     }
     .footer-text {
-        font-size: 15px;
+        font-size: 10px;
     }
     .img-properties {
-        max-width: 20px;
+        max-width: 35px;
     }
     .footer-mobile-row {
-         gap: 20px;
+        flex-direction: row;
     }
 
 }
