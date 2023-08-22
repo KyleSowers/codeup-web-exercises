@@ -1,5 +1,12 @@
 body {
+    display: flex;
+   justify-content: center;
     position: relative;
+}
+
+.page-wrapper {
+    justify-content: center;
+    width: 65%;
 }
 
 header {
@@ -45,6 +52,9 @@ footer  {
 }
 
 @media screen and (max-width: 576px) {
+    .page-wrapper {
+        width: 100%;
+    }
     .alert-info {
         display: flex;
         border: 2px lightgray solid;
@@ -89,6 +99,7 @@ footer  {
     }
     .footer-mobile-row {
         flex-direction: row;
+        align-items: end;
     }
 
 }
