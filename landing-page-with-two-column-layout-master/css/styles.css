@@ -41,3 +41,9 @@ button {
 .single-submit {
     width: 200px;
 }
+
+@media sccreen and (max-width: 900px) {
+    .row {
+        flex-direction: column;
+    }
+}
