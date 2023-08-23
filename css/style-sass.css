@@ -1,0 +1,50 @@
+/*
+multi
+line
+comment
+*/
+body {
+    background-color: honeydew;
+    font-family: roboto, sans-serif;
+}
+
+header {
+    background-image: url("../img/background.webp");
+    background-size: 150px;
+    height: 150px;
+    border: 2px solid;
+}
+
+.fancy-header {
+    color: aquamarine; /* single line comment */
+    text-decoration: underline;
+    text-align: center;
+}
+
+h1, h2 {
+    color: orangered;
+    text-decoration: underline;
+}
+
+li {
+    list-style: square;
+}
+
+table, td, tr  {
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+a:link {
+    color: aquamarine;
+}
+a:hover {
+    color: firebrick;
+}
+a:active {
+    color: palegreen;
+}
+a:visited {
+    color: slategray;
+}
