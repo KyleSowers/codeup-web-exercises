@@ -1,0 +1,10 @@
+.nav-items-join {
+    display: flex;
+   justify-content: flex-start;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
