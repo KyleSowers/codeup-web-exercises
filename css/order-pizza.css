@@ -8,3 +8,20 @@
     flex-direction: row;
 }
 
+.jumbotron {
+    height: 346px;
+    background-size: cover;
+    background-image: url("../img/welcome-to-pizza-world.png");
+}
+
+.overlay {
+    background-color: #fff;
+    width: 100%;
+    padding: 0
+}
+
+.blue-title-box {
+    background-color: #0066ff;
+    color: #fff;
+    font-size: 14px;
+}
