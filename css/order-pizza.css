@@ -25,3 +25,12 @@
     color: #fff;
     font-size: 14px;
 }
+
+.top-table-row {
+    background-color: #efefef;
+
+}
+
+table {
+   width: 100%
+}
