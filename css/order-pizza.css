@@ -68,7 +68,7 @@ a.nav-link {
     border-radius: 100px;
 }
 
-.next-step-button {
+.next-button {
     color: #fff;
     background-color: #0066ff;
     border: none;
@@ -76,4 +76,18 @@ a.nav-link {
     height: 37px;
     width: 115px;
     margin-right: 20px;
+}
+
+.previous-button {
+    color: #fff;
+    background-color: #0066ff;
+    border: none;
+    border-radius: 3px;
+    height: 37px;
+    width: 115px;
+    margin-right: -2px;
+}
+
+.selector {
+    width: 1250px;
 }
