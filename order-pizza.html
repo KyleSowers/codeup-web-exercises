@@ -34,49 +34,67 @@
             </div>
         </nav>
 
-        <div class="container jumbotron d-flex align-items-center justify-content-center bg-light px-0">
+        <div class="container jumbotron d-flex align-items-center justify-content-center bg-light px-">
             <div class="overlay opacity-75 ">
                 <h1 class="text-center">Welcome To Pizza World!</h1>
             </div>
         </div>
         <!--End of Image-->
         <div class="container">
-            <h2>Build Your Own Pizza!</h2>
+            <h2 class="fs-4 build-pizza-header d-flex align-items-end">Build Your Own Pizza!</h2>
             <div class="container ">
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <a class="nav-link active" data-toggle="tab" aria-current="page" href="#tab1"
-                           data-bs-toggle="list">Size and Crust</a>
+                           data-bs-toggle="list"><span class="badge">1</span>  Size and Crust</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#tab2" data-bs-toggle="list">Cheese and Sauce</a>
+                        <a class="nav-link" data-toggle="tab" href="#tab2" data-bs-toggle="list"><span class="badge">2</span>  Cheese and Sauce</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#tab3" data-bs-toggle="list">Toppings</a>
+                        <a class="nav-link" data-toggle="tab" href="#tab3" data-bs-toggle="list"><span class="badge">3</span>  Toppings</a>
                     </li>
                 </ul>
-                <div class="tab-content border">
+                <div class="tab-content border gap-10">
                     <div class="tab-pane active" id="tab1" role="tabpanel">
-                        <div class=" container blue-title-box">Choose Size and Crust</div>
+                        <div class=" container blue-title-box">
+                            <p class="ms-2">Choose Size and Crust</p>
+                        </div>
                         <div class="d-flex border m-3">
                             <table>
-                                <tr class="top-table-row ">
-                                    <th class="border">Hand Tossed</th>
+                                <tr class="top-table-row">
+                                    <th class="ms-2">Hand Tossed</th>
                                 </tr>
-                                <tr>
-                                    <td class="border">Garlic seasoned crust with a rich, buttery taste</td>
+                                <tr class="top-table-row-2 border">
+                                    <td class="ms-2">Garlic seasoned crust with a rich, buttery taste</td>
                                 </tr>
-                                <tr>
-                                    <td class="border">   <input type="radio">  Small 10"</td>
+                                <tr class="top-table-row-2 border">
+                                    <td class="ms-2"><input type="radio">  Small (10")</td>
                                 </tr>
-                                <tr>
-                                    <td class="border">   <input type="radio">  Medium 12"</td>
+                                <tr class="top-table-row-2 border">
+                                    <td class="ms-2"><input type="radio">  Medium (12")</td>
                                 </tr>
                             </table>
                         </div>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas quaerat recusandae laudantium iste
-                            tenetur neque, adipisci aliquid necessitatibus maxime officiis facere dicta repudiandae debitis
-                            earum aperiam fuga cum tempore quod?</p>
+                        <div class="d-flex border m-3">
+                            <table>
+                                <tr class="top-table-row">
+                                    <th class="ms-2">Crispy Thin</th>
+                                </tr>
+                                <tr class="top-table-row-2 border">
+                                    <td class="ms-2">Thin enough for optimum crispy to crunchy ratio.</td>
+                                </tr>
+                                <tr class="top-table-row-2 border">
+                                    <td class="ms-2">   <input type="radio">  Medium (12")</td>
+                                </tr>
+                                <tr class="top-table-row-2 border">
+                                    <td class="ms-2">   <input type="radio">  Large (14")</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class=" container bottom-table-row d-flex justify-content-end align-items-center">
+                            <button type="submit" class="next-step-button"> Next Step > </button>
+                        </div>
                     </div>
                     <div class="tab-pane" id="tab2" role="tabpanel">
                         <div class="blue-title-box ">Choose Size and Crust</div>

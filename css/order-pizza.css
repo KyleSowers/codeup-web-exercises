@@ -24,13 +24,56 @@
     background-color: #0066ff;
     color: #fff;
     font-size: 14px;
+    height: 25px;
 }
 
 .top-table-row {
+    display: flex;
     background-color: #efefef;
+    font-size: 12px;
+    height: 28px;
+    align-items: center;
+}
 
+.top-table-row-2 {
+    display: flex;
+    font-size: 12px;
+    height: 28px;
+    align-items: center;
+}
+
+.bottom-table-row {
+    background-color: #efefef;
+    height: 55px;
 }
 
 table {
    width: 100%
+}
+
+.container {
+    padding: 0;
+}
+
+.build-pizza-header {
+    height: 50px;
+}
+
+a.nav-link {
+    font-size: 12px;
+}
+
+.badge {
+    background-color: dimgray;
+    border-radius: 100px;
+}
+
+.next-step-button {
+    color: #fff;
+    background-color: #0066ff;
+    border: none;
+    border-radius: 3px;
+    height: 37px;
+    width: 115px;
+    margin-right: 20px;
 }
