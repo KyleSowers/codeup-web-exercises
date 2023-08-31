@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM: Query and Modify</title>
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
 </head>
 <body>
 
@@ -69,7 +74,7 @@
         console.log(subParagraphs[0].innerHTML);
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-        subParagraphs[0].innerHTML = 'Mission Accomplished!';
+        subParagraphs[0].innerText = 'Mission Accomplished!';
         console.log(subParagraphs[0]);
         console.log(subParagraphs[0].innerHTML);
 
