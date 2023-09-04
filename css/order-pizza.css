@@ -11,7 +11,7 @@
 .jumbotron {
     height: 346px;
     background-size: cover;
-    background-image: url("../img/welcome-to-pizza-world.png");
+    background-image: url("media/welcome-to-pizza-world.png");
 }
 
 .overlay {

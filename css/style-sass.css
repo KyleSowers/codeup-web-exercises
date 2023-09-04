@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-image: url("../img/background.webp");
+    background-image: url("media/background.webp");
     background-size: 150px;
     height: 150px;
     border: 2px solid;
