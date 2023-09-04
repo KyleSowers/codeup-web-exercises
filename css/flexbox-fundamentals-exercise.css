@@ -51,9 +51,10 @@ section:nth-of-type(1) {
     height: 3em;
     background: lightgreen;
     /* enter needed declarations here */
+    display: flex;
 }
 section:nth-of-type(1) div:last-child {
-    align-self: flex-start;
+    align-self: center;
     /* enter needed declarations here */
 }
 
@@ -127,6 +128,8 @@ section:nth-of-type(6) {
     background: coral;
     height: 14em;
     /* enter needed declarations here */
+    display: flex;
+
     flex-wrap: wrap;
 }
 
