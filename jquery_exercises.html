@@ -5,8 +5,18 @@
         <title>jQuery Exercises</title>
     </head>
     <body>
-        <h1>Learning jQuery!</h1>
+        <div class="container">
+            <h1 class="intro" id="codeup">Learning jQuery is FUN!</h1>
 
+            <p class="words" id="words">We are learning jQuery, but I need to make sure I put more effort and time into JavaScript still to make sure I understand well.</p>
+
+            <ul>
+                <li id="lesson1" class="codeup">HTML</li>
+                <li id="lesson2" class="codeup">CSS</li>
+                <li id="lesson3" class="codeup">JavaScript</li>
+                <li id="lesson4" class="codeup">jQuery</li>
+            </ul>
+        </div>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
         <script>
@@ -14,8 +24,17 @@
             alert('The DOM has finished loading!');
         });
 
-        console.log($('h1'));
+        alert($('#words').html());
+        alert($('#lesson1').html())
+        alert($('#lesson4, #lesson2').html())
 
+        $('.codeup').css('border', '1px solid red');
+
+        $('li').css('font-size', '20px');
+
+        $('h1, p, li').css('color', 'green');
+
+        alert($('h1').html());
 
         </script>
     </body>
