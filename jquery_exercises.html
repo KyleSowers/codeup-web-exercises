@@ -32,10 +32,31 @@
 
         $('li').css('font-size', '20px');
 
-        $('h1, p, li').css('color', 'green');
+        // $('h1, p, li').css('color', 'green');
 
         alert($('h1').html());
 
+
+        $('h1').on('dblclick', function () {
+            $('h1').css('background-color', '#234a74');
+        })
+
+        $('h1').on('click', function () {
+            $('h1').css('background-color', '#f5f5f5');
+        })
+
+        $('p').on('dblclick', function () {
+            $(this).css('font-size', '18px');
+        })
+
+        $('li').hover(
+            function () {
+                $(this).css('color', 'red');
+            },
+            function () {
+                $(this).css('color', 'black');
+            }
+        )
         </script>
     </body>
 </html>
