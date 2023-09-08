@@ -7,6 +7,9 @@
         .invisible {
             visibility: hidden;
         }
+        .highlighted {
+            background-color: #FFFF00;
+        }
     </style>
 </head>
 <body>
@@ -74,6 +77,12 @@
         $('button').on('click', (e) => {
             $('dd').toggleClass('invisible');
         })
+
+        $('dt').on('click', (e) => {
+            $(e.target).toggleClass('highlighted');
+        })
+
+
 
         // $('.invisible').css('visibility', 'hidden');
 
