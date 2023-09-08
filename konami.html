@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Konami Code</title>
+  <link rel="stylesheet" href="konami.css">
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+  "use strict";
+
+  $(function() {
+    let secretPwKeyCode = "3838404037393739666513";
+    let inputStrKeyCode = "";
+
+    let secretPwCharacters = "makeityellow";
+    let inputStrCharacters = "";
+
+    let goodAfternoon = "717979717669";
+    let gameSound = '40393837'
+
+    $(document).keyup(function (event) {
+      console.log(event.keyCode);
+
+      inputStrKeyCode += event.originalEvent.keyCode;
+
+      inputStrCharacters += event.originalEvent.key;
+
+      if (inputStrKeyCode === secretPwKeyCode) {
+        alert("You have added 30 lives!");
+        inputStrKeyCode = "";
+        inputStrCharacters = "";
+      }
+
+      if (inputStrCharacters === secretPwCharacters) {
+        $("body").css("background-color", "yellow");
+        var obj =document.createElement('audio');
+        obj.src = 'audio/mixkit-winning-an-extra-bonus-2060.wav'
+                obj.play();
+        inputStrKeyCode = "";
+        inputStrCharacters = "";
+      }
+
+      if (inputStrKeyCode === goodAfternoon) {
+        alert("good afternoon!");
+        inputStrKeyCode = "";
+        inputStrCharacters = "";
+      }
+
+      if (inputStrKeyCode === gameSound) {
+        ;
+        inputStrKeyCode = "";
+        inputStrCharacters = "";
+      }
+
+      $("#currentTypingStr").text(inputStrCharacters);
+      $("#currentTypingCode").text(inputStrKeyCode);
+    })
+    });
+</script>
+</body>
+</html>
