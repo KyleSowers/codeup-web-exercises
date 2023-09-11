@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+<script>
+    $.get('https://pokeapi.co/api/v2/pokemon/clefairy').done(function(data) {
+        console.log(data);
+    })
+
+    $.get('https://ron-swanson-quotes.herokuapp.com/v2/quotes').done(function(data) {
+        console.log(data);
+    });
+
+</script>
+</body>
+</html>

@@ -10,6 +10,12 @@
         .highlighted {
             background-color: #FFFF00;
         }
+        .bolder {
+            font-weight: bold;
+        }
+        .line-blue {
+            color: blue;
+        }
     </style>
 </head>
 <body>
@@ -19,62 +25,92 @@
         <dt>Super Mario 64</dt>
         <dd>1996</dd>
         <dd>3D world evolution with Mario.</dd>
-        <br>
+
 
         <dt>The Legend of Zelda: Ocarina of time</dt>
         <dd>1998</dd>
         <dd>3D evolution of the classic Link to the Past.</dd>
-        <br>
+
 
         <dt>Star Fox 64</dt>
         <dd>1997</dd>
         <dd>Arguably one of the best shoot 'em ups ever made.</dd>
-        <br>
+
 
         <dt>Wave Race 64</dt>
         <dd>1996</dd>
         <dd>Nintendo's third 64 game, nailed an underrepresented racing genre.</dd>
-        <br>
+
 
         <dt>Star Wars: Rogue Squadron</dt>
         <dd>1998</dd>
         <dd>While GameCube’s Star Wars: Rogue Leader: Rogue Squadron 2 is a fan favorite, the original game for N64 is no sleeping Wookie!</dd>
-        <br>
+
 
         <dt>Mario Golf</dt>
         <dd>1999</dd>
         <dd>Mario Golf was the first time Nintendo gave its star his own sports game on a console.</dd>
-        <br>
+
 
         <dt>Mario Party 3</dt>
         <dd>2000</dd>
         <dd>In addition to adding characters, Mario Party 3 just had more stuff!</dd>
-        <br>
+
 
         <dt>GoldenEye 007</dt>
         <dd>1997</dd>
         <dd>To this day, GoldenEye 007 is regarded as one of the best video game adaptations of a feature film.</dd>
-        <br>
+
 
         <dt>Mario Kart 64</dt>
         <dd>1996</dd>
         <dd>Mario Kart 64 is a classic kart racer that still holds up today as one of the best multiplayer N64 games.</dd>
-        <br>
+
 
         <dt>1080 Snowboarding</dt>
         <dd>1998</dd>
         <dd>Much like Wave Race 64 managed to convey the feeling of water, this captured the feel of moving over snow in ways that hadn’t been seen before.</dd>
-        <br>
 
-        <button type="button">Press Me!</button>
+
+        <button class="n64-button" type="button">Press Me!</button>
     </dl>
+
+    <hr>
+
+    <h3>Trevor Lawrence (QB 1)</h3>
+    <ul>
+        <li>Yards: 241</li>
+        <li>TD: 2</li>
+        <li>Completions: 24/32</li>
+        <li class="fumble">Fumble: 1</li>
+    </ul>
+
+    <h3>Calvin Ridley (WR 1)</h3>
+    <ul>
+        <li>Yards: 101</li>
+        <li>TD: 1</li>
+        <li>Receptions: 8</li>
+        <li class="fumble">Fumble: 1</li>
+    </ul>
+
+    <h3>Travis Etienne (RB 1)</h3>
+    <ul>
+        <li>Yards: 77</li>
+        <li>TD: 1</li>
+        <li>Attempts: 18</li>
+        <li class="fumble">Fumble: 0</li>
+    </ul>
+
+    <button id="highlight-fumble-button">Highlight Fumbles</button>
+
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <script>
         $("dd").toggleClass('invisible');
 
-        $('button').on('click', (e) => {
+        $('.n64-button').on('click', (e) => {
             $('dd').toggleClass('invisible');
         })
 
@@ -86,6 +122,21 @@
 
         // $('.invisible').css('visibility', 'hidden');
 
+    $('#highlight-fumble-button').on('click', () => {
+        $('ul').each(function (index) {
+            $(this).children().last().toggleClass('highlighted');
+        })
+    })
+
+    $('h3').on('click', (e) => {
+        $(e.target).next().children().each(function (index) {
+            $(this).toggleClass('bolder');
+        });
+    });
+
+    $('li').on('click', (e) => {
+        $(e.target).parent().children().first().toggleClass('line-blue');
+    })
 
     </script>
 </body>
