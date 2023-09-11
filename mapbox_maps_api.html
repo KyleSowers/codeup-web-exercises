@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <title>Title</title>
+</head>
+<body>
+  <div id='map' style='width: 100%; height: 900px;'></div>
+  <script src="js/keys.js"></script>
+  <script src="js/mapbox-geocoder-utils.js"></script></body>
+
+  <script>
+    mapboxgl.accessToken = Mapbox_API_Token;
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/mapbox/streets-v12', // style URL
+      center: [-74.5, 40], // starting position [lng, lat]
+      zoom: 10, // starting zoom
+    });
+
+
+    geocode("Moe's Tavern, Universal Studios, Orlando", Mapbox_API_Token).then(function (result) {
+      console.log(result);
+      map.setCenter(result);
+      map.setZoom(17);
+      let marker = new mapboxgl.Marker().setLngLat(result).addTo(map);
+      let popup = new mapboxgl.Popup().setHTML("<p>Moe's Tavern</p>");
+      marker.setPopup(popup);
+    });
+
+
+
+
+
+
+
+  </script>
+</html>
