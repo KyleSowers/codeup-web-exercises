@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Ajax Blog</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #fff;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 30px;
+        border: 3px #222 solid;
+        border-radius: 7px;
+        background-color: #f4f4f4;
+        box-shadow: 0 0 25px 5px rgb(200, 200, 0, 0.5);
+        padding-left: 10px;
+        color: #3f3f3f;
+      }
+
+      h1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        border: 3px #333333 solid;
+        background-color: #555555;
+        color: #f3f3f3;
+        box-shadow: 0 0 15px 5px rgba(200, 200, 0, 0.5);
+      }
+
+      p {
+        color: #444444;
+        font-weight: bold;
+        font-size: ;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="posts">
+      <h1></h1>
+      <p></p>
+      <h3></h3>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+          integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script>
+      (function () {
+        "use strict";
+        console.log('hi')
+        $.ajax('data/blog.json').done(function (data) {
+          console.log(data[0].title);
+
+          let displayBlog = '';
+          for (let i = 0; i < data.length; i++) {
+            displayBlog += `<h1>${data[i].title}</h1><p>${data[i].content}</p><h3>${data[i].categories}</h3>`
+          }
+          $('#posts').html(displayBlog);
+        })
+        })();
+
+    </script>
+  </body>
+</html>
