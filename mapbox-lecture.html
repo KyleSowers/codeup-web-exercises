@@ -10,16 +10,20 @@
 </head>
 <body>
 
-  <div id='map' style='width: 400px; height: 300px;'></div>
+  <div id='map' style='width: 100%; height: 900px;'></div>
   <script src="js/keys.js"></script>
   <script>
-    mapboxgl.accessToken = 'Mapbox_API_Token';
+    mapboxgl.accessToken = Mapbox_API_Token;
     const map = new mapboxgl.Map({
       container: 'map', // container ID
       style: 'mapbox://styles/mapbox/streets-v12', // style URL
       center: [-74.5, 40], // starting position [lng, lat]
       zoom: 9, // starting zoom
     });
+
+    let marker = new mapboxgl.Marker().setLngLat([12.4922, 41.8902]).addTo(map);
+    let popup = new mapboxgl.Popup().setHTML("<p>Collisuem!</p>").addTo(map);
+    marker.setPopup(popup);
   </script>
 
 </body>
