@@ -6,7 +6,20 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
     <title>Title</title>
     <style>
-
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        h1 {
+            background-color: #ffff99;
+            border: 4px #ff5733 solid;
+        }
+        img {
+            box-shadow: 0 0 15px 0 rgba(0, 0, 0, 1.4);
+        }
     </style>
 </head>
 <body>
@@ -20,7 +33,7 @@
               name: "Moe's Tavern",
               // address: "-81.468041, 28.478797",
               address: "Moe's Tavern, Universal Studios, Orlando",
-              popupHTML: "<h1>Welcome To Moe's!</h1> <p>Enjoy a cold Duff Beer!</p> <p>Homer Simpsons favorite after hour</p> <img src='images/homer-moes.jpeg'>"
+              popupHTML: "<div><h1>Welcome To Moe's!</h1> <p>Enjoy a cold Duff Beer!</p> <p>Homer Simpsons favorite after hour</p> <img src='images/homer-moes.jpeg'></div>"
           },
           {
               name: "Leaky Cauldron",
