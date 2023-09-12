@@ -13,9 +13,18 @@
             align-items: center;
             text-align: center;
         }
-        h1 {
+        .moes {
             background-color: #ffff99;
             border: 4px #ff5733 solid;
+        }
+        .leaky-caldron {
+            background-color: #707070;
+            border: 4px #6F4E37 solid;
+            color: sandybrown;
+        }
+        .toothsome {
+            background-color: chocolate;
+            border: 4px saddlebrown solid;
         }
         img {
             box-shadow: 0 0 15px 0 rgba(0, 0, 0, 1.4);
@@ -30,20 +39,17 @@
   <script>
       let favRestaurant = [
           {
-              name: "Moe's Tavern",
-              // address: "-81.468041, 28.478797",
-              address: "Moe's Tavern, Universal Studios, Orlando",
-              popupHTML: "<div><h1>Welcome To Moe's!</h1> <p>Enjoy a cold Duff Beer!</p> <p>Homer Simpsons favorite after hour</p> <img src='images/homer-moes.jpeg'></div>"
+              address: "-81.468041, 28.478797",
+              // address: "Moe's Tavern, Universal Studios, Orlando",
+              popupHTML: "<div><h1 class='moes'>Welcome To Moe's!</h1> <p>Enjoy a cold Duff Beer!</p> <p>Homer Simpsons favorite after hour</p> <img src='images/homer-moes.jpeg'></div>"
           },
           {
-              name: "Leaky Cauldron",
               address: "-81.469478, 28.479504",
-              popupHTML: "<p>At the Leaky Cauldron, the butterbeer never runs dry!</p>"
+              popupHTML: "<div><h1 class='leaky-caldron'>The Leaky Caldron</h1> <p>Butterbeer never runs dry here!</p> <p>Cheers Wiizards!</p> <img src='images/butterbeer.jpeg' alt='Butterbeer in front of Diagon Alley building'></div>"
           },
           {
-              name: "Toothsome Chocolate Factory",
               address: "-81.467568, 28.473028",
-              popupHTML: "<p>Toothsome Chocolate Factory\'s \"Red Velvet\" (cupCake w/ vanilla ice cream, raspberry sauce, sprinkles, whip cream, and maraschino cherry) will sweeten your day!</p>"
+              popupHTML: "<div><h1 class='toothsome'>Toothsome Chocolate Factory</h1> <p>Red Velvet Milkshake (cupCake w/ vanilla ice cream, raspberry sauce, sprinkles, whip cream, and maraschino cherry) that will sweeten your day!</p> <img src='images/red-velvet.jpeg' alt='Red Velvet Milkshake'></div>"
           }
       ]
 
