@@ -28,36 +28,148 @@ $.get(oneCallAPI).done((data) => {
     console.log(data);
     let currentWeatherDisplay = '';
     for (let i = 0; i < data.daily.length; i++) {
-        currentWeatherDisplay = `<div><h1>${data.daily[i].dt}</h1></div> <br>`;
-        currentWeatherDisplay += `<div>Current Temperature: ${data.daily[i].temp.day}</div><br>`;
-        currentWeatherDisplay += `<div>Description: ${data.daily[i].weather[0].description}</div><br>`;
-        currentWeatherDisplay += `<div>Humidity: ${data.daily[i].humidity}</div><br>`;
-        currentWeatherDisplay += `<div>Winds: ${data.daily[i].wind_speed}</div><br>`;
-        currentWeatherDisplay += `<div>Pressure: ${data.daily[i].pressure}</div><br>`;
-        console.log(currentWeatherDisplay);
-        if (i === 0) {
-            $('#insert-weather').html(currentWeatherDisplay);
-        }
 
+        currentWeatherDisplay = `<h2>${data.daily[i].dt}</h2> <br>`;
+        if (i === 0) {
+            $('.day0Date').html(currentWeatherDisplay);
+        }
         if (i === 1) {
-            $('#insert-weather1').html(currentWeatherDisplay);
+            $('.day1Date').html(currentWeatherDisplay);
         }
 
         if (i === 2) {
-            $('#insert-weather2').html(currentWeatherDisplay);
+            $('.day2Date').html(currentWeatherDisplay);
         }
 
         if (i === 3) {
-            $('#insert-weather3').html(currentWeatherDisplay);
+            $('.day3Date').html(currentWeatherDisplay);
         }
 
         if (i === 4) {
-            $('#insert-weather4').html(currentWeatherDisplay);
+            $('.day4Date').html(currentWeatherDisplay);
         }
 
-        if (i > 4 ) {
-            break;
+        currentWeatherDisplay = `<p>Current Temperature: ${data.daily[i].temp.day}</p><br>`;
+        if (i === 0) {
+            $('.day0Temp').html(currentWeatherDisplay);
         }
+        if (i === 1) {
+            $('.day1Temp').html(currentWeatherDisplay);
+        }
+
+        if (i === 2) {
+            $('.day2Temp').html(currentWeatherDisplay);
+        }
+
+        if (i === 3) {
+            $('.day3Temp').html(currentWeatherDisplay);
+        }
+
+        if (i === 4) {
+            $('.day4Temp').html(currentWeatherDisplay);
+        }
+
+        currentWeatherDisplay = `<p>Description: ${data.daily[i].weather[0].description}</p><br>`;
+        if (i === 0) {
+            $('.day0Desc').html(currentWeatherDisplay);
+        }
+        if (i === 1) {
+            $('.day1Desc').html(currentWeatherDisplay);
+        }
+
+        if (i === 2) {
+            $('.day2Desc').html(currentWeatherDisplay);
+        }
+
+        if (i === 3) {
+            $('.day3Desc').html(currentWeatherDisplay);
+        }
+
+        if (i === 4) {
+            $('.day4Desc').html(currentWeatherDisplay);
+        }
+
+        currentWeatherDisplay = `<p>Humidity: ${data.daily[i].humidity}</p><br>`;
+        if (i === 0) {
+            $('.day0Humi').html(currentWeatherDisplay);
+        }
+        if (i === 1) {
+            $('.day1Humi').html(currentWeatherDisplay);
+        }
+
+        if (i === 2) {
+            $('.day2Humi').html(currentWeatherDisplay);
+        }
+
+        if (i === 3) {
+            $('.day3Humi').html(currentWeatherDisplay);
+        }
+
+        if (i === 4) {
+            $('.day4Humi').html(currentWeatherDisplay);
+        }
+        currentWeatherDisplay = `<p>Winds: ${data.daily[i].wind_speed}</p><br>`;
+        if (i === 0) {
+            $('.day0Wind').html(currentWeatherDisplay);
+        }
+        if (i === 1) {
+            $('.day1Wind').html(currentWeatherDisplay);
+        }
+
+        if (i === 2) {
+            $('.day2Wind').html(currentWeatherDisplay);
+        }
+
+        if (i === 3) {
+            $('.day3Wind').html(currentWeatherDisplay);
+        }
+
+        if (i === 4) {
+            $('.day4Wind').html(currentWeatherDisplay);
+        }
+        currentWeatherDisplay = `<p>Pressure: ${data.daily[i].pressure}<p></p><br>`;
+        if (i === 0) {
+            $('.day0Pres').html(currentWeatherDisplay);
+        }
+        if (i === 1) {
+            $('.day1Pres').html(currentWeatherDisplay);
+        }
+
+        if (i === 2) {
+            $('.day2Pres').html(currentWeatherDisplay);
+        }
+
+        if (i === 3) {
+            $('.day3Pres').html(currentWeatherDisplay);
+        }
+
+        if (i === 4) {
+            $('.day4Pres').html(currentWeatherDisplay);
+        }
+        // console.log(currentWeatherDisplay);
+        // if (i === 0) {
+        //     $('#insert-weather:').html(currentWeatherDisplay);
+        // }
+        //
+        // if (i === 1) {
+        //     $('#insert-weather1').html(currentWeatherDisplay);
+        // }
+        //
+        // if (i === 2) {
+        //     $('#insert-weather2').html(currentWeatherDisplay);
+        // }
+        //
+        // if (i === 3) {
+        //     $('#insert-weather3').html(currentWeatherDisplay);
+        // }
+        //
+        // if (i === 4) {
+        //     $('#insert-weather4').html(currentWeatherDisplay);
+        // }
+        //
+        // if (i > 4 ) {
+        //     break;
+        // }
     }
 });
 
