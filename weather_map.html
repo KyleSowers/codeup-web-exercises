@@ -18,9 +18,37 @@
             gap: 20px;
         }
         header {
-            height: 4%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            height: 1%;
             width: auto;
+            padding: 20px;
             background-color: #2F65F8;
+            color: white;
+        }
+        #headerP {
+            padding-right: 90px;
+        }
+        label {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 5px;
+            padding-left: 10px;
+        }
+        input {
+            height: 20px;
+        }
+        button {
+            font-size: 11px;
+            font-weight: bold;
+            height: 24px;
+            width: 35px;
+            background-color: #2F65F8;
+            color: white;
+            border-radius: 2px white solid;
         }
         .container {
             display: flex;
@@ -42,10 +70,11 @@
 <body>
     <div class="page-wrapper">
         <header>
-            <h1>Weather App</h1>
+            <h1 id="headerh1">Weather App</h1>
+            <p id="headerP">Current city: </p>
         </header>
 
-        <h1>Hey! What's the weather like?</h1>
+        <label>Place <input type="text" class="locationInput"><button id="placeButton">Find</button></label>
 
         <div class="container">
             <div id="insert-weather"></div>
