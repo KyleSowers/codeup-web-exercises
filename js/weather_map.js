@@ -29,7 +29,8 @@ $.get(oneCallAPI).done((data) => {
     let currentWeatherDisplay = '';
     for (let i = 0; i < data.daily.length; i++) {
 
-        currentWeatherDisplay = `<h2>${data.daily[i].dt}</h2> <br>`;
+//For Date display across containers
+        currentWeatherDisplay = `<p>${data.daily[i].dt}</p> <br>`;
         if (i === 0) {
             $('.day0Date').html(currentWeatherDisplay);
         }
@@ -49,6 +50,7 @@ $.get(oneCallAPI).done((data) => {
             $('.day4Date').html(currentWeatherDisplay);
         }
 
+//For temperature display across containers
         currentWeatherDisplay = `<p>Current Temperature: ${data.daily[i].temp.day}</p><br>`;
         if (i === 0) {
             $('.day0Temp').html(currentWeatherDisplay);
@@ -69,7 +71,8 @@ $.get(oneCallAPI).done((data) => {
             $('.day4Temp').html(currentWeatherDisplay);
         }
 
-        currentWeatherDisplay = `<p>Description: ${data.daily[i].weather[0].description}</p><br>`;
+//For description display across containers
+        currentWeatherDisplay = `<p>Description: <b>${data.daily[i].weather[0].description}</b></p><br>`;
         if (i === 0) {
             $('.day0Desc').html(currentWeatherDisplay);
         }
@@ -89,7 +92,8 @@ $.get(oneCallAPI).done((data) => {
             $('.day4Desc').html(currentWeatherDisplay);
         }
 
-        currentWeatherDisplay = `<p>Humidity: ${data.daily[i].humidity}</p><br>`;
+//For humidity display across containers
+        currentWeatherDisplay = `<p>Humidity: <b>${data.daily[i].humidity}</b></p><br>`;
         if (i === 0) {
             $('.day0Humi').html(currentWeatherDisplay);
         }
@@ -108,7 +112,9 @@ $.get(oneCallAPI).done((data) => {
         if (i === 4) {
             $('.day4Humi').html(currentWeatherDisplay);
         }
-        currentWeatherDisplay = `<p>Winds: ${data.daily[i].wind_speed}</p><br>`;
+
+//For wind-speed display across containers
+        currentWeatherDisplay = `<p>Winds: <b>${data.daily[i].wind_speed}</b></p><br>`;
         if (i === 0) {
             $('.day0Wind').html(currentWeatherDisplay);
         }
@@ -127,7 +133,9 @@ $.get(oneCallAPI).done((data) => {
         if (i === 4) {
             $('.day4Wind').html(currentWeatherDisplay);
         }
-        currentWeatherDisplay = `<p>Pressure: ${data.daily[i].pressure}<p></p><br>`;
+
+//For pressure display across containers
+        currentWeatherDisplay = `<p>Pressure: <b>${data.daily[i].pressure}</b></p><br>`;
         if (i === 0) {
             $('.day0Pres').html(currentWeatherDisplay);
         }
@@ -146,32 +154,12 @@ $.get(oneCallAPI).done((data) => {
         if (i === 4) {
             $('.day4Pres').html(currentWeatherDisplay);
         }
-        // console.log(currentWeatherDisplay);
-        // if (i === 0) {
-        //     $('#insert-weather:').html(currentWeatherDisplay);
-        // }
-        //
-        // if (i === 1) {
-        //     $('#insert-weather1').html(currentWeatherDisplay);
-        // }
-        //
-        // if (i === 2) {
-        //     $('#insert-weather2').html(currentWeatherDisplay);
-        // }
-        //
-        // if (i === 3) {
-        //     $('#insert-weather3').html(currentWeatherDisplay);
-        // }
-        //
-        // if (i === 4) {
-        //     $('#insert-weather4').html(currentWeatherDisplay);
-        // }
-        //
-        // if (i > 4 ) {
-        //     break;
-        // }
     }
 });
+
+
+
+
 
 
     // let currentWeatherDisplay = '';
