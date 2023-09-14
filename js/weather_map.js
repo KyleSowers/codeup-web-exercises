@@ -73,6 +73,28 @@ $.get(oneCallAPI).done((data) => {
             $('.day4Temp').html(currentWeatherDisplay);
         }
 
+//For weather icons
+        currentWeatherDisplay = `${data.daily[i].weather[0].icon}<br>`;
+        if (i === 0) {
+            //update the src attribute to be `http://openweathermap.org/img/w/${currentWeatherDisplay}.png`
+            $('#icon-cloud').html(currentWeatherDisplay);
+        }
+        if (i === 1) {
+            $('#icon1cloud').html(currentWeatherDisplay);
+        }
+
+        if (i === 2) {
+            $('#icon2cloud').html(currentWeatherDisplay);
+        }
+
+        if (i === 3) {
+            $('#icon3cloud').html(currentWeatherDisplay);
+        }
+
+        if (i === 4) {
+            $('#icon4cloud').html(currentWeatherDisplay);
+        }
+
 //For description display across containers
         currentWeatherDisplay = `<p>Description: <b>${data.daily[i].weather[0].description}</b></p><br>`;
         if (i === 0) {
