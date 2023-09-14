@@ -28,9 +28,11 @@ $.get(oneCallAPI).done((data) => {
     console.log(data);
     let currentWeatherDisplay = '';
     for (let i = 0; i < data.daily.length; i++) {
-
-//For Date display across containers
-        currentWeatherDisplay = `<p>${data.daily[i].dt}</p> <br>`;
+        let ts = new Date(data.daily[i].dt * 1000)
+        console.log(ts);
+        console.log(data.daily[i].dt);
+        // let date = ts.toDateString()
+        currentWeatherDisplay = `<p>${ts.toDateString()}</p> <br>`;
         if (i === 0) {
             $('.day0Date').html(currentWeatherDisplay);
         }
