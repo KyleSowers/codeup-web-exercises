@@ -1,12 +1,28 @@
 'use strict'
 
 mapboxgl.accessToken = Mapbox_API_Token;
+const coordinates = document.getElementById('coordinates');
 const map = new mapboxgl.Map({
     container: 'map', // container ID
-    style: 'mapbox://styles/mapbox/streets-v12', // style URL
-    center: [-74.5, 40], // starting position [lng, lat]
-    zoom: 9, // starting zoom
+    style: 'mapbox://styles/mapbox/satellite-streets-v12', // style URL
+    // center: [-74.5, 40], // starting position [lng, lat]
+    // zoom: 9, // starting zoom
 });
+
+const marker = new mapboxgl.Marker({
+    draggable: true
+})
+    .setLngLat([0, 0])
+    .addTo(map);
+
+function onDragEnd() {
+    const lngLat = marker.getLngLat();
+    coordinates.style.display = 'block';
+    coordinates.innerHTML = `Longitude: ${lngLat.lng}<br />Latitude: ${lngLat.lat}`;
+}
+
+marker.on('dragend', onDragEnd);
+
 
 
 //This is the request for San Antonio weather
@@ -74,25 +90,25 @@ $.get(oneCallAPI).done((data) => {
         }
 
 //For weather icons
-        currentWeatherDisplay = `${data.daily[i].weather[0].icon}<br>`;
+        currentWeatherDisplay = data.daily[i].weather[0].icon;
+        console.log(currentWeatherDisplay);
         if (i === 0) {
-            //update the src attribute to be `http://openweathermap.org/img/w/${currentWeatherDisplay}.png`
-            $('#icon-cloud').html(currentWeatherDisplay);
+            $('#icon-cloud').attr('src', `http://openweathermap.org/img/w/${currentWeatherDisplay}.png`);
         }
         if (i === 1) {
-            $('#icon1cloud').html(currentWeatherDisplay);
+            $('#icon1cloud').attr('src', `http://openweathermap.org/img/w/${currentWeatherDisplay}.png`);
         }
 
         if (i === 2) {
-            $('#icon2cloud').html(currentWeatherDisplay);
+            $('#icon2cloud').attr('src', `http://openweathermap.org/img/w/${currentWeatherDisplay}.png`);
         }
 
         if (i === 3) {
-            $('#icon3cloud').html(currentWeatherDisplay);
+            $('#icon3cloud').attr('src', `http://openweathermap.org/img/w/${currentWeatherDisplay}.png`);
         }
 
         if (i === 4) {
-            $('#icon4cloud').html(currentWeatherDisplay);
+            $('#icon4cloud').attr('src', `http://openweathermap.org/img/w/${currentWeatherDisplay}.png`);
         }
 
 //For description display across containers
@@ -180,6 +196,9 @@ $.get(oneCallAPI).done((data) => {
         }
     }
 });
+
+
+
 
 
 
