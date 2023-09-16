@@ -4,21 +4,19 @@
     <meta charset="UTF-8">
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
-    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
     <link rel="stylesheet" href="weather_map.css">
     <title>Weather</title>
 
 </head>
 <body>
-    <div class="page-wrapper">
+    <div class="page-wrapper" >
         <header>
             <h1 id="headerh1">Weather App</h1>
-            <p id="headerP">Current city: </p>
         </header>
 
-        <label>Place <input type="text" id="geocoder" class="geocoder"><button id="placeButton">Find</button></label>
 
+<!--            <button id="placeButton">Type Location</button>-->
+<!--    This container displays the five days of weather-->
         <div class="container">
             <div id="insert-weather" class="insert-weather">
                 <div class="day0Date dayDate"></div>
@@ -81,8 +79,12 @@
                 <div class="day4Pres indentRight"></div>
             </div>
         </div>
-
-<!--for geocode from text-->
+        <div id="btnBox" name="btnBox">
+            <button id="placeButton" class="mapBtn">Type Location</button>
+        </div>
+<!--mapbox-->
+        <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+        <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
         <div id='map' style='width: 100%; height: 600px;'>
         </div>
         <pre id="coordinates" class="coordinates"></pre>
