@@ -391,11 +391,8 @@
             console.log(newCoordinates);
 
             oneCallAPI = `https://api.openweathermap.org/data/3.0/onecall?lat=${newCoordinates[1]}&lon=${newCoordinates[0]}&appid=${OPEN_WEATHER_APPID}&units=imperial`;
-            const marker = new mapboxgl.Marker({
-                draggable: true
-            })
-                .setLngLat([newCoordinates[0], newCoordinates[1]])
-                .addTo(map);
+
+            marker.setLngLat([newCoordinates[0], newCoordinates[1]]);
             $.get(oneCallAPI).done((data) => {
                 console.log(data);
                 let currentWeatherDisplay = '';
@@ -553,6 +550,7 @@
                 }
             });
 
-            marker.on('dragend', onDragEnd);
+            // marker.on('dragend', onDragEnd);
         });
     })
+marker.on('dragend', onDragEnd);
