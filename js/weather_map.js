@@ -1,4 +1,5 @@
 'use strict'
+import {Mapbox_API_Token, OPEN_WEATHER_APPID} from "./keys.js";
 //bookmarks are displayed in left bar to annotate a new function/loop
 
 
