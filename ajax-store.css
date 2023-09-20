@@ -49,7 +49,7 @@ th, td {
 }
 
 /*th:hover, td:hover {*/
-/*    background-color: darkslategrey;*/
+/*    background-color: black;*/
 /*    color: white;*/
 /*}*/
 
@@ -57,6 +57,7 @@ button {
     margin-top: 25px;
     font-size: 32px;
     border-radius: 8px;
+    width: 175px;
 }
 
 button:hover {
