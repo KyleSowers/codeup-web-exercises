@@ -1,9 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 #page-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: navajowhite;
 }
 
 #container {
@@ -11,20 +17,52 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 350px;
     height: 200px;
     font-size: 20px;
+    gap: 10px;
 }
 
 h1 {
     text-align: center;
     width: 250px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.6);
     border-radius: 4px;
+    background-color: whitesmoke;
+    margin-bottom: 50px;
+}
+
+#products {
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.6);
+}
+
+#products:hover, tr:hover, th:hover {
+    background-color: black;
+    color: whitesmoke;
 }
 
 th, td {
-    padding: 15px;
+    padding: 15px 55px;
     border: 2px black solid;
+    background-color: #e9e9e9;
+    color: black;
+}
+
+/*th:hover, td:hover {*/
+/*    background-color: darkslategrey;*/
+/*    color: white;*/
+/*}*/
+
+button {
+    margin-top: 25px;
+    font-size: 32px;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: darkslategrey;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.6);
 }
 
